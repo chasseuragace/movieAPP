@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'custom_widgets/bottom_navigation.dart';
+import 'custom_widgets/custom_search.dart';
 
 void main() {
   runApp(MyApp());
@@ -47,24 +48,7 @@ class Homepage extends StatelessWidget {
                   .headline6
                   ?.copyWith(color: Colors.black87),
             ),
-            Container(
-              // color: Colors.red,
-              height: 80,
-              child: Row(
-                children: [
-                  Icon(Icons.search),
-                  Expanded(
-                    child: TextFormField(
-                      decoration: InputDecoration(
-                        hintText: ("Search Movies here"),
-                        border: InputBorder.none,
-                      ),
-                    ),
-                  ),
-                  Icon(Icons.settings_input_hdmi),
-                ],
-              ),
-            ),
+            CustomSearch(),
             Container(
               height: 80,
               //color: Colors.red,
